@@ -3,7 +3,7 @@ package com.example.sportzinteractivedemo.module.home.model
 
 data class MatchDetailModel(
 
-    var matchdetail: MatchDetailDataModel? = MatchDetailDataModel(),
+    var matchDetail: MatchDetailDataModel?,
     var nuggets: ArrayList<String> = arrayListOf(),
     var innings: ArrayList<InningsModel> = arrayListOf(),
     var teams: TeamsModel? = TeamsModel(),

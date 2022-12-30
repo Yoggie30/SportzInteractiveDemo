@@ -1,11 +1,12 @@
 package com.example.sportzinteractivedemo.module.home.model
 
+
 data class PlayersItemModel(
 
-    var position: String? = null,
-    var nameFull: String? = null,
-    var isKeeper: Boolean? = null,
-    var batting: BattingModel? = BattingModel(),
-    var bowling: BowlingModel? = BowlingModel()
+    val position: Int,
+    val nameFull: String,
+    val isKeeper: Boolean,
+    val batting: BattingModel,
+    val bowling: BowlingModel
 
 )

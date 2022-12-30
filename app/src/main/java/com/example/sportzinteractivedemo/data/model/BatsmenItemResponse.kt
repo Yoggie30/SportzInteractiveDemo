@@ -4,16 +4,16 @@ import com.google.gson.annotations.SerializedName
 
 data class BatsmenItemResponse(
 
-    @SerializedName("Batsman") var batsman: String? = null,
-    @SerializedName("Runs") var runs: String? = null,
-    @SerializedName("Balls") var balls: String? = null,
-    @SerializedName("Fours") var fours: String? = null,
-    @SerializedName("Sixes") var sixes: String? = null,
-    @SerializedName("Dots") var dots: String? = null,
-    @SerializedName("Strikerate") var strikeRate: String? = null,
-    @SerializedName("Dismissal") var dismissal: String? = null,
-    @SerializedName("Howout") var howOut: String? = null,
-    @SerializedName("Bowler") var bowler: String? = null,
-    @SerializedName("Fielder") var fielder: String? = null
+    @SerializedName("Batsman") val batsman: Int,
+    @SerializedName("Runs") val runs: Int,
+    @SerializedName("Balls") val balls: Int,
+    @SerializedName("Fours") val fours: Int,
+    @SerializedName("Sixes") val sixes: Int,
+    @SerializedName("Dots") val dots: Int,
+    @SerializedName("Strikerate") val strikeRate: Double,
+    @SerializedName("Dismissal") val dismissal: String,
+    @SerializedName("Howout") val howOut: String,
+    @SerializedName("Bowler") val bowler: Int,
+    @SerializedName("Fielder") val fielder: Int
 
 )

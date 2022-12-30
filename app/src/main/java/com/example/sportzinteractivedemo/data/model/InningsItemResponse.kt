@@ -4,22 +4,22 @@ import com.google.gson.annotations.SerializedName
 
 data class InningsItemResponse(
 
-    @SerializedName("Number") var number: String? = null,
-    @SerializedName("Battingteam") var battingTeam: String? = null,
-    @SerializedName("Total") var total: String? = null,
-    @SerializedName("Wickets") var wickets: String? = null,
-    @SerializedName("Overs") var overs: String? = null,
-    @SerializedName("Runrate") var runRate: String? = null,
-    @SerializedName("Byes") var byes: String? = null,
-    @SerializedName("Legbyes") var legByes: String? = null,
-    @SerializedName("Wides") var wides: String? = null,
-    @SerializedName("Noballs") var noBalls: String? = null,
-    @SerializedName("Penalty") var penalty: String? = null,
-    @SerializedName("AllottedOvers") var allottedOvers: String? = null,
-    @SerializedName("Batsmen") var batsmen: ArrayList<BatsmenResponse> = arrayListOf(),
-    @SerializedName("Partnership_Current") var partnershipCurrent: PartnershipCurrentResponse? = PartnershipCurrentResponse(),
-    @SerializedName("Bowlers") var bowlers: ArrayList<BowlersResponse> = arrayListOf(),
-    @SerializedName("FallofWickets") var fallOfWickets: ArrayList<FallOfWicketsResponse> = arrayListOf(),
-    @SerializedName("PowerPlay") var powerPlay: PowerPlayResponse? = PowerPlayResponse()
+    @SerializedName("Number") val number: String,
+    @SerializedName("Battingteam") val battingTeam: Int,
+    @SerializedName("Total") val total: Int,
+    @SerializedName("Wickets") val wickets: Int,
+    @SerializedName("Overs") val overs: Double,
+    @SerializedName("Runrate") val runRate: Double,
+    @SerializedName("Byes") val byes: Int,
+    @SerializedName("Legbyes") val legByes: Int,
+    @SerializedName("Wides") val wides: Int,
+    @SerializedName("Noballs") val noBalls: Int,
+    @SerializedName("Penalty") val penalty: Int,
+    @SerializedName("AllottedOvers") val allottedOvers: Int,
+    @SerializedName("Batsmen") val batsmen: List<BatsmenResponse>,
+    @SerializedName("Partnership_Current") val partnershipCurrent: PartnershipCurrentResponse,
+    @SerializedName("Bowlers") val bowlers: List<BowlersResponse>,
+    @SerializedName("FallofWickets") val fallOfWickets: List<FallOfWicketsResponse>,
+    @SerializedName("PowerPlay") val powerPlay: PowerPlayResponse
 
 )

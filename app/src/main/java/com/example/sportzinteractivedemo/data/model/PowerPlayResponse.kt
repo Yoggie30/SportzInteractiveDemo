@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class PowerPlayResponse(
 
-    @SerializedName("PP1") var PP1: String? = null,
-    @SerializedName("PP2") var PP2: String? = null
+    @SerializedName("PP1") val pP1 : String,
+    @SerializedName("PP2") val pP2 : String
 
 )

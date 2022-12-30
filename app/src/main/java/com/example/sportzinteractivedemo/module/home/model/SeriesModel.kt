@@ -2,10 +2,10 @@ package com.example.sportzinteractivedemo.module.home.model
 
 data class SeriesModel(
 
-    var id: String? = null,
-    var name: String? = null,
-    var status: String? = null,
-    var tour: String? = null,
-    var tourName: String? = null
+    val id: Int,
+    val name: String,
+    val status: String,
+    val tour: Int,
+    val tourName: String
 
 )

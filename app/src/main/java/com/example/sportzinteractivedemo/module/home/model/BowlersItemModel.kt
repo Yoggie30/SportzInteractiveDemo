@@ -1,16 +1,15 @@
 package com.example.sportzinteractivedemo.module.home.model
 
-
 data class BowlersItemModel(
 
-    var bowler: String? = null,
-    var overs: String? = null,
-    var maidens: String? = null,
-    var runs: String? = null,
-    var wickets: String? = null,
-    var economyRate: String? = null,
-    var noBalls: String? = null,
-    var wides: String? = null,
-    var dots: String? = null
+    val bowler: Int,
+    val overs: Int,
+    val maidens: Int,
+    val runs: Int,
+    val wickets: Int,
+    val economyRate: Double,
+    val noBalls: Int,
+    val wides: Int,
+    val dots: Int
 
 )

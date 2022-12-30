@@ -5,20 +5,20 @@ import com.google.gson.annotations.SerializedName
 
 data class MatchDetailDataResponse(
 
-    @SerializedName("Team_Home") var teamHome: Int? = null,
-    @SerializedName("Team_Away") var teamAway: Int? = null,
-    @SerializedName("Match") var match: MatchResponse? = MatchResponse(),
-    @SerializedName("Series") var series: SeriesResponse? = SeriesResponse(),
-    @SerializedName("Venue") var venue: VenueResponse? = VenueResponse(),
-    @SerializedName("Officials") var officials: OfficialsResponse? = OfficialsResponse(),
-    @SerializedName("Weather") var weather: String? = null,
-    @SerializedName("Tosswonby") var tossWonBy: String? = null,
-    @SerializedName("Status") var status: String? = null,
-    @SerializedName("Status_Id") var statusId: String? = null,
-    @SerializedName("Player_Match") var playerMatch: String? = null,
-    @SerializedName("Result") var result: String? = null,
-    @SerializedName("Winningteam") var winningTeam: String? = null,
-    @SerializedName("Winmargin") var winMargin: String? = null,
-    @SerializedName("Equation") var equation: String? = null
+    @SerializedName("Team_Home") val teamHome : Int,
+    @SerializedName("Team_Away") val teamAway : Int,
+    @SerializedName("Match") val match : MatchResponse,
+    @SerializedName("Series") val series : SeriesResponse,
+    @SerializedName("Venue") val venue : VenueResponse,
+    @SerializedName("Officials") val officials : OfficialsResponse,
+    @SerializedName("Weather") val weather : String,
+    @SerializedName("Tosswonby") val tossWonBy : Int,
+    @SerializedName("Status") val status : String,
+    @SerializedName("Status_Id") val statusId : Int,
+    @SerializedName("Player_Match") val playerMatch : String,
+    @SerializedName("Result") val result : String,
+    @SerializedName("Winningteam") val winningTeam : Int,
+    @SerializedName("Winmargin") val winMargin : String,
+    @SerializedName("Equation") val equation : String
 
 )

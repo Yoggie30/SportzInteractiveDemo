@@ -5,15 +5,17 @@ import com.google.gson.annotations.SerializedName
 
 data class MatchResponse(
 
-    @SerializedName("Livecoverage") var liveCoverage: String? = null,
-    @SerializedName("Id") var id: String? = null,
-    @SerializedName("Code") var code: String? = null,
-    @SerializedName("League") var league: String? = null,
-    @SerializedName("Number") var number: String? = null,
-    @SerializedName("Type") var type: String? = null,
-    @SerializedName("Date") var date: String? = null,
-    @SerializedName("Time") var time: String? = null,
-    @SerializedName("Offset") var offset: String? = null,
-    @SerializedName("Daynight") var dayNight: String? = null
+    @SerializedName("Livecoverage") val liveCoverage : String,
+    @SerializedName("Id") val id : Int,
+    @SerializedName("Code") val code : String,
+    @SerializedName("League") val league : String,
+    @SerializedName("Number") val number : String,
+    @SerializedName("Type") val type : String,
+    @SerializedName("Date") val date : String,
+    @SerializedName("Time") val time : String,
+    @SerializedName("Offset") val offset : String,
+    @SerializedName("Daynight") val dayNight : String
 
 )
+
+

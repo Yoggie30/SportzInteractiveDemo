@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName
 
 data class SeriesResponse(
 
-    @SerializedName("Id") var id: String? = null,
-    @SerializedName("Name") var name: String? = null,
-    @SerializedName("Status") var status: String? = null,
-    @SerializedName("Tour") var tour: String? = null,
-    @SerializedName("Tour_Name") var tourName: String? = null
+    @SerializedName("Id") val id : Int,
+    @SerializedName("Name") val name : String,
+    @SerializedName("Status") val status : String,
+    @SerializedName("Tour") val tour : Int,
+    @SerializedName("Tour_Name") val tourName : String
 
 )

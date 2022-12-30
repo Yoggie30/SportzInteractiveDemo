@@ -4,8 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 class BatsmenCurrentItemResponse(
 
-    @SerializedName("Batsman") var batsman: String? = null,
-    @SerializedName("Runs") var runs: String? = null,
-    @SerializedName("Balls") var balls: String? = null
+    @SerializedName("Batsman") val batsman: Int,
+    @SerializedName("Runs") val runs: Int,
+    @SerializedName("Balls") val balls: Int
+
 
 )

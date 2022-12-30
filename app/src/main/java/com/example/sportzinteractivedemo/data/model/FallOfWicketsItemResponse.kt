@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class FallOfWicketsItemResponse(
 
-    @SerializedName("Batsman") var batsman: String? = null,
-    @SerializedName("Score") var score: String? = null,
-    @SerializedName("Overs") var overs: String? = null
+    @SerializedName("Batsman") val batsman : Int,
+    @SerializedName("Score") val score : Int,
+    @SerializedName("Overs") val overs : Double
 
 )

@@ -4,10 +4,10 @@ import com.google.gson.annotations.SerializedName
 
 data class PlayersItemResponse(
 
-    @SerializedName("Position"  ) var position : String?  = null,
-    @SerializedName("Name_Full" ) var nameFull : String?  = null,
-    @SerializedName("Iskeeper"  ) var isKeeper : Boolean? = null,
-    @SerializedName("Batting"   ) var batting  : BattingResponse? = BattingResponse(),
-    @SerializedName("Bowling"   ) var bowling  : BowlingResponse? = BowlingResponse()
+    @SerializedName("Position") val position: Int,
+    @SerializedName("Name_Full") val nameFull: String,
+    @SerializedName("Iskeeper") val isKeeper: Boolean,
+    @SerializedName("Batting") val batting: BattingResponse,
+    @SerializedName("Bowling") val bowling: BowlingResponse
 
 )

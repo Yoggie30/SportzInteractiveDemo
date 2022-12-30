@@ -1,17 +1,16 @@
 package com.example.sportzinteractivedemo.module.home.model
 
-
 data class MatchModel(
 
-    var liveCoverage: String? = null,
-    var id: String? = null,
-    var code: String? = null,
-    var league: String? = null,
-    var number: String? = null,
-    var type: String? = null,
-    var date: String? = null,
-    var time: String? = null,
-    var offset: String? = null,
-    var dayNight: String? = null
+    val liveCoverage: String,
+    val id: Int,
+    val code: String,
+    val league: String,
+    val number: String,
+    val type: String,
+    val date: String,
+    val time: String,
+    val offset: String,
+    val dayNight: String
 
 )

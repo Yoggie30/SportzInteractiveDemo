@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class OfficialsResponse(
 
-    @SerializedName("Umpires") var umpires: String? = null,
-    @SerializedName("Referee") var referee: String? = null
+    @SerializedName("Umpires") val umpires : String,
+    @SerializedName("Referee") val referee : String
 
 )
