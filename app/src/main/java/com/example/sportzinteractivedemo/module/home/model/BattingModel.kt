@@ -3,8 +3,8 @@ package com.example.sportzinteractivedemo.module.home.model
 data class BattingModel(
 
     val style: String,
-    val average: Double,
-    val strikeRate: Double,
-    val runs: Int
+    val average: String,
+    val strikeRate: String,
+    val runs: String
 
 )

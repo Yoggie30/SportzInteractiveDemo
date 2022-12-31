@@ -1,9 +1,8 @@
 package com.example.sportzinteractivedemo.module.home.model
 
 data class MatchModel(
-
     val liveCoverage: String,
-    val id: Int,
+    val id: String,
     val code: String,
     val league: String,
     val number: String,
@@ -12,5 +11,4 @@ data class MatchModel(
     val time: String,
     val offset: String,
     val dayNight: String
-
 )

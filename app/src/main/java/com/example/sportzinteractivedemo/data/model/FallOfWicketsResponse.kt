@@ -1,7 +1,11 @@
 package com.example.sportzinteractivedemo.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class FallOfWicketsResponse(
 
-    var fowData: ArrayList<HashMap<Int, FallOfWicketsItemResponse>>? = arrayListOf()
+    @SerializedName("Batsman") val batsman : String,
+    @SerializedName("Score") val score : String,
+    @SerializedName("Overs") val overs : String
 
 )

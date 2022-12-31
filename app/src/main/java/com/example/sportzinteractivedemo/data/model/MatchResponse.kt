@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class MatchResponse(
 
     @SerializedName("Livecoverage") val liveCoverage : String,
-    @SerializedName("Id") val id : Int,
+    @SerializedName("Id") val id : String,
     @SerializedName("Code") val code : String,
     @SerializedName("League") val league : String,
     @SerializedName("Number") val number : String,

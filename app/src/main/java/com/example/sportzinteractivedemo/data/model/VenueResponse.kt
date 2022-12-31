@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class VenueResponse(
 
-    @SerializedName("Id") val id : Int,
+    @SerializedName("Id") val id : String,
     @SerializedName("Name") val name : String
 
 )

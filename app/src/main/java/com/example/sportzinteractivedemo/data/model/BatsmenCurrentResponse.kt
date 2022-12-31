@@ -1,7 +1,12 @@
 package com.example.sportzinteractivedemo.data.model
 
-data class BatsmenCurrentResponse(
+import com.google.gson.annotations.SerializedName
 
-    var currentBatsmenData: ArrayList<HashMap<Int, BatsmenCurrentItemResponse>>? = arrayListOf()
+class BatsmenCurrentResponse(
+
+    @SerializedName("Batsman") val batsman: String,
+    @SerializedName("Runs") val runs: String,
+    @SerializedName("Balls") val balls: String
+
 
 )

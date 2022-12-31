@@ -1,7 +1,7 @@
 package com.example.sportzinteractivedemo.module.home.model
 
 data class BatsmenCurrentModel(
-
-    var currentBatsmenData: ArrayList<HashMap<Int, BatsmenCurrentItemModel>>? = arrayListOf()
-
+    val batsman: String,
+    val runs: String,
+    val balls: String
 )

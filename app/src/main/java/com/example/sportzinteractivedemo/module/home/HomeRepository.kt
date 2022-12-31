@@ -8,11 +8,6 @@ import com.example.sportzinteractivedemo.module.home.model.MatchDetailModel
 import com.example.sportzinteractivedemo.util.NetworkHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okhttp3.ResponseBody
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import timber.log.Timber
 import javax.inject.Inject
 
 class HomeRepository @Inject constructor(
@@ -20,26 +15,20 @@ class HomeRepository @Inject constructor(
     private val apiHelper: RetrofitInstance
 ) : BaseRepository() {
 
-    suspend fun fetchMatchDetails(): MutableLiveData<List<MatchDetailModel>> {
+    suspend fun fetchMatchDetails(): MutableLiveData<MatchDetailModel> {
         return withContext(Dispatchers.IO) {
-            val responseModel = MutableLiveData<List<MatchDetailModel>>()
+            val responseModel = MutableLiveData<MatchDetailModel>()
             if (networkHelper.isNetworkConnected()) {
-                val response = apiHelper.getAPIService().fetchMatchDetails().enqueue(object :
-                    Callback<ResponseBody> {
-
-                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                        Timber.e("onFailure--> ${t.message}")
+                val response = apiHelper.getAPIService().fetchMatchDetails()
+                if (response.isSuccessful) {
+                    val result = response.body()
+                    result?.let { data ->
+                        responseModel.postValue(assembleMatchDetailResponse(data))
                     }
-
-                    override fun onResponse(
-                        call: Call<ResponseBody>,
-                        response: Response<ResponseBody>
-                    ) {
-                        val responseString = response.body()?.string() ?: ""
-                        assembleMatchDetailResponse(responseString)
-                    }
-                })
-                Timber.e("response --> $response}")
+                    //Timber.e("response --> $result}")
+                } else {
+                    throw Exception(errorHandling(response.code().toString()))
+                }
             } else {
                 throw Exception("No Internet Connection")
             }

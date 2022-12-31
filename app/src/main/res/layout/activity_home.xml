@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".module.home.HomeActivity">
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/blue_grey"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_10sdp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/seriesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryDarkColor"
+            android:padding="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/tvSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                android:text="Series"
+                tools:text="Team A" />
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivTeamA"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvTeamA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                android:text="Team A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivTeamA"
+                tools:text="Team A" />
+
+            <TextView
+                android:id="@+id/tvMatchDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                android:text="Team A VS Team B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivTeamB"
+                app:layout_constraintStart_toEndOf="@+id/ivTeamA"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Team A VS Team B" />
+
+
+            <TextView
+                android:id="@+id/tvMatchVenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_12ssp"
+                android:text="Venue:"
+                app:layout_constraintEnd_toStartOf="@+id/ivTeamB"
+                app:layout_constraintStart_toEndOf="@+id/ivTeamA"
+                app:layout_constraintTop_toBottomOf="@+id/tvMatchDetails"
+                tools:text="Team A VS Team B" />
+
+            <ImageView
+                android:id="@+id/ivTeamB"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvTeamB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                android:text="Team B"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivTeamB"
+                tools:text="Team B" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- <TextView
+             android:id="@+id/tvDate"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="@dimen/_4sdp"
+             android:textSize="@dimen/_14ssp"
+             android:textStyle="bold"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+             tools:text="Date:01/01/2023" />-->
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

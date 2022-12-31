@@ -6,8 +6,8 @@ data class MatchDetailResponse(
 
     @SerializedName("Matchdetail") var matchdetail: MatchDetailDataResponse?,
     @SerializedName("Nuggets") var nuggets: ArrayList<String> = arrayListOf(),
-    @SerializedName("Innings") var innings: ArrayList<HashMap<Int, InningsItemResponse>>? = arrayListOf(),
-    @SerializedName("Teams") var teams: ArrayList<HashMap<Int, TeamsItemResponse>>? = arrayListOf(),
-    @SerializedName("Notes") var notes: ArrayList<HashMap<Int, ArrayList<String>>>? = arrayListOf()
+    @SerializedName("Innings") var innings: ArrayList<InningsResponse>? = arrayListOf(),
+    @SerializedName("Teams") var teams: Map<String, TeamsResponse>,
+    @SerializedName("Notes") var notes: Map<String, ArrayList<String>>
 
 )

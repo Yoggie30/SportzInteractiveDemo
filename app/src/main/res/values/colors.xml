@@ -24,4 +24,5 @@
 
     <color name="transDisabled">#40979797</color>
     <color name="yellow">#ffc520</color>
+    <color name="blue_grey">#EEF1F4</color>
 </resources>

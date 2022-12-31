@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class BowlingResponse(
 
     @SerializedName("Style") val style: String,
-    @SerializedName("Average") val average: Double,
-    @SerializedName("Economyrate") val economyRate: Double,
-    @SerializedName("Wickets") val wickets: Int
+    @SerializedName("Average") val average: String,
+    @SerializedName("Economyrate") val economyRate: String,
+    @SerializedName("Wickets") val wickets: String
 
 )

@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 
 data class PartnershipCurrentResponse(
 
-    @SerializedName("Runs") val runs: Int,
-    @SerializedName("Balls") val balls: Int,
-    @SerializedName("Batsmen") val batsmen: List<BatsmenCurrentResponse> = arrayListOf()
+    @SerializedName("Runs") val runs: String,
+    @SerializedName("Balls") val balls: String,
+    @SerializedName("Batsmen") val batsmen: ArrayList<BatsmenCurrentResponse> = arrayListOf()
 
 )
